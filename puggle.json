@@ -1,0 +1,18 @@
+{
+  "version": "0.5.1",
+  "projectName": "trello-client",
+  "preset": {
+    "name": "robb-j:ts-node",
+    "version": "0.2.2"
+  },
+  "plugins": {
+    "npm": "0.1.0"
+  },
+  "params": {
+    "npm": {
+      "packageName": "@openlab/trello-client",
+      "packageInfo": "",
+      "repository": "digitalinteraction/trello-client"
+    }
+  }
+}

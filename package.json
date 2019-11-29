@@ -1,0 +1,66 @@
+{
+  "name": "@openlab/trello-client",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "digitalinteraction/trello-client",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
+    "preversion": "npm run test -s && npm run build",
+    "start": "node -r dotenv/config dist/index.js",
+    "dev": "nodemon -w src -e ts -x 'npx ts-node -r dotenv/config' src/index.ts"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "keywords": [],
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "dotenv": "8.2.0",
+    "got": "^9.6.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/got": "^9.6.9",
+    "@types/jest": "24.0.23",
+    "@types/node": "11.15.3",
+    "jest": "24.9.0",
+    "lint-staged": "9.5.0",
+    "nock": "^11.7.0",
+    "nodemon": "1.19.4",
+    "prettier": "1.19.1",
+    "ts-jest": "24.2.0",
+    "ts-node": "8.5.4",
+    "typescript": "3.7.2",
+    "yorkie": "2.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
