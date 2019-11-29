@@ -2,7 +2,6 @@
   "name": "@openlab/trello-client",
   "description": "",
   "version": "0.1.0",
-  "private": true,
   "repository": "digitalinteraction/trello-client",
   "author": "",
   "license": "MIT",
