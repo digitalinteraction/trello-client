@@ -68,7 +68,6 @@ There are also types and interfaces exported from [types.ts](./src/types.ts)
 
 - Add more endpoints
 - Add more complex types to capture `?fields` query parameters varadic responses
-- Add automated tests to test the integrations
 - Version with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) once reacehd 1.0.0
 
 ## Development
@@ -91,7 +90,9 @@ npm install
 These are the commands you'll regularly run to develop the API, in no particular order.
 
 ```bash
-# ???
+# Run tests and re-run on changes
+# -> Exit with a ^C (control+C)
+npm run test -- --watch
 ```
 
 ### Irregular use
@@ -112,8 +113,6 @@ npm run generate-toc
 ```
 
 ### Testing
-
-> There aren't any tests yet ... oops
 
 This repo uses [unit tests](https://en.wikipedia.org/wiki/Unit_testing) to ensure that everything is working correctly, guide development, avoid bad code and reduce defects.
 The [Jest](https://www.npmjs.com/package/jest) package is used to run unit tests.

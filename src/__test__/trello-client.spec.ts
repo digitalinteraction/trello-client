@@ -54,7 +54,7 @@ describe('TrelloClient', () => {
     it('should call GET: /boards/:boardId/labels', async () => {
       trelloScope
         .get('/boards/some-board-id/labels')
-        .query(fakeAuth)
+        .query({ ...fakeAuth, limit: 1000 })
         .reply(200, [{ id: 1, name: 'some-fake-label' }])
 
       const orgs = await trello.fetchLabels('some-board-id')
