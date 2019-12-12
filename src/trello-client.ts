@@ -62,7 +62,9 @@ export class TrelloClient {
   async fetchLabels(boardId: string): Promise<TrelloLabel[]> {
     debug(`#fetchLabels board=${boardId}`)
 
-    const labels = await this.client.get(`/boards/${boardId}/labels`)
+    const labels = await this.client.get(`/boards/${boardId}/labels`, {
+      query: { limit: 1000 }
+    })
 
     return labels.body
   }
