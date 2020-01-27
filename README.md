@@ -140,6 +140,13 @@ npm test -s
 npm run coverage -s
 ```
 
+### Commits
+
+All commits to this repo must follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+This ensures changes are structured and means the [CHANGELOG.md](/CHANGELOG.md) can be automatically generated.
+
+This standard is enforced through a `commit-msg` hook using [yorkie](https://www.npmjs.com/package/yorkie).
+
 ### Code formatting
 
 This repo uses [Prettier](https://prettier.io/) to automatically format code to a consistent standard.
@@ -163,6 +170,9 @@ This repo is responsible for the `@openlab/trello-client` NPM package.
 # -> Following https://www.conventionalcommits.org/en/v1.0.0/
 # -> Generates the CHANGELOG.md based on those commits
 npm run release
+
+# Push the version commit and tag to git
+git push --follow-tags
 
 # Publish the npm package
 npm publish
