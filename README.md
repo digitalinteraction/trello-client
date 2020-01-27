@@ -4,6 +4,19 @@ This project is a **partial** implementation of the [Trello REST API](https://de
 Endpoints will be added as they are needed for projects.
 
 <!-- toc-head -->
+
+## Table of contents
+
+- [Current functionality](#current-functionality)
+- [Future work](#future-work)
+- [Development](#development)
+  - [Setup](#setup)
+  - [Regular use](#regular-use)
+  - [Irregular use](#irregular-use)
+  - [Testing](#testing)
+  - [Code formatting](#code-formatting)
+  - [Publishing](#publishing)
+
 <!-- toc-tail -->
 
 ## Current functionality
