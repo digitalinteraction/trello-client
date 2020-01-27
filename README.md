@@ -14,6 +14,7 @@ Endpoints will be added as they are needed for projects.
   - [Regular use](#regular-use)
   - [Irregular use](#irregular-use)
   - [Testing](#testing)
+  - [Commits](#commits)
   - [Code formatting](#code-formatting)
   - [Publishing](#publishing)
 
