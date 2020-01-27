@@ -67,8 +67,7 @@ There are also types and interfaces exported from [types.ts](./src/types.ts)
 ## Future work
 
 - Add more endpoints
-- Add more complex types to capture `?fields` query parameters varadic responses
-- Version with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) once reacehd 1.0.0
+- Add more complex types to capture `?fields` query parameters which have varadic responses
 
 ## Development
 
@@ -91,7 +90,7 @@ These are the commands you'll regularly run to develop the API, in no particular
 
 ```bash
 # Run tests and re-run on changes
-# -> Exit with a ^C (control+C)
+# -> Exit with control+C
 npm run test -- --watch
 ```
 
@@ -114,7 +113,8 @@ npm run generate-toc
 
 ### Testing
 
-This repo uses [unit tests](https://en.wikipedia.org/wiki/Unit_testing) to ensure that everything is working correctly, guide development, avoid bad code and reduce defects.
+This repo uses [unit tests](https://en.wikipedia.org/wiki/Unit_testing)
+to ensure that everything is working correctly, guide development, avoid bad code and reduce defects.
 The [Jest](https://www.npmjs.com/package/jest) package is used to run unit tests.
 Tests are any file in `src/` that end with `.spec.ts`, by convention they are inline with the source code,
 in a parallel folder called `__tests__`.
@@ -132,26 +132,29 @@ npm run coverage -s
 This repo uses [Prettier](https://prettier.io/) to automatically format code to a consistent standard.
 It works using the [yorkie](https://www.npmjs.com/package/yorkie)
 and [lint-staged](https://www.npmjs.com/package/lint-staged) packages to
-automatically format code whenever code is commited.
+automatically format code whenever it is commited.
 This means that code that is pushed to the repo is always formatted to a consistent standard.
 
 You can manually run the formatter with `npm run prettier` if you want.
 
 Prettier is slightly configured in [package.json](/package.json)
-and will ignore files in [.prettierignore](/.prettierignore).
+and will ignore files defined in [.prettierignore](/.prettierignore).
 
 ### Publishing
 
 This repo is responsible for the `@openlab/trello-client` NPM package.
 
 ```bash
-# Create a new semantically versioned version of the project
-npm version # major | minor | patch | --help
+# Create a new version of the project
+# -> Picks a new version based on the commits since the last version
+# -> Following https://www.conventionalcommits.org/en/v1.0.0/
+# -> Generates the CHANGELOG.md based on those commits
+npm run release
 
-# Publish the package
+# Publish the npm package
 npm publish
 ```
 
 ---
 
-> This project was set up by [puggle](https://npm.im/puggle)
+> The code on https://github.com/unplatform/trello-client is a mirror of https://openlab.ncl.ac.uk/gitlab/catalyst/trello-client
