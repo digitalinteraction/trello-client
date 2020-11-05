@@ -1,9 +1,0 @@
-#
-# Files to ignore from the docker daemon
-#
-
-*.env
-.DS_Store
-node_modules
-coverage
-dist
